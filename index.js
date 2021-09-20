@@ -1,4 +1,10 @@
-let aukstis = 15;
+let aukstis = document.querySelector("input");
+aukstis.addEventListener("input", inputValue);
+function inputValue(event) {
+  if (Number(event.target.value) <= 25) {
+    aukstis = Number(event.target.value);
+  } else aukstis = null;
+}
 const result = document.querySelector(".result");
 const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");

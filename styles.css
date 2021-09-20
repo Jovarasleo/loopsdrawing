@@ -1,0 +1,11 @@
+body {
+  display: grid;
+  justify-content: center;
+}
+#app {
+  font-family: "monospace";
+  display: grid;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+}
