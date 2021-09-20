@@ -14,9 +14,9 @@ const button5 = document.querySelector(".button5");
 
 button1.addEventListener("click", (event) => {
   for (i = 0; i <= aukstis; i++) {
-    result.innerHTML += "<br>" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+    result.innerHTML += "<br>";
     for (it = 0; it < i; it++) {
-      result.innerHTML += "*" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "*" + "&nbsp;";
     }
   }
 });
@@ -24,10 +24,10 @@ button2.addEventListener("click", (event) => {
   for (i = 0; i <= aukstis; i++) {
     result.innerHTML += "<br>";
     for (it = aukstis; it >= i; it--) {
-      result.innerHTML += "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "&nbsp;";
     }
     for (ite = 0; ite <= it; ite++) {
-      result.innerHTML += "*" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "*" + "&nbsp;";
     }
   }
 });
@@ -36,30 +36,42 @@ button3.addEventListener("click", (event) => {
   for (i = aukstis; i >= 0; i--) {
     result.innerHTML += "<br>";
     for (it = aukstis; it >= i; it--) {
-      result.innerHTML += "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "&nbsp;";
     }
     for (ite = 0; ite <= it; ite++) {
-      result.innerHTML += "*" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "*" + "&nbsp;";
     }
   }
 });
 button4.addEventListener("click", (event) => {
-  for (i = 0; i <= aukstis; i++) {
+  for (i = 0; i <= aukstis / 2; i++) {
     result.innerHTML += "<br>";
     for (it = aukstis; it >= i; it--) {
-      result.innerHTML += "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "&nbsp;";
     }
     for (ite = 0; ite <= it; ite++) {
-      result.innerHTML += "*" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+      result.innerHTML += "*" + "&nbsp;";
     }
   }
-  for (i = aukstis - 1; i > 0; i--) {
-    result.innerHTML += "<br>";
-    for (it = aukstis; it >= i; it--) {
-      result.innerHTML += "&nbsp;" + "&nbsp;" + "&nbsp;";
+  if (aukstis % 2 === 1) {
+    for (i = aukstis / 2; i > 0; i--) {
+      result.innerHTML += "<br>";
+      for (it = aukstis; it >= i; it--) {
+        result.innerHTML += "&nbsp;";
+      }
+      for (ite = 0; ite <= it; ite++) {
+        result.innerHTML += "*" + "&nbsp;";
+      }
     }
-    for (ite = 0; ite <= it; ite++) {
-      result.innerHTML += "*" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;";
+  } else {
+    for (i = aukstis / 2 - 1; i > 0; i--) {
+      result.innerHTML += "<br>";
+      for (it = aukstis; it >= i; it--) {
+        result.innerHTML += "&nbsp;";
+      }
+      for (ite = 0; ite <= it; ite++) {
+        result.innerHTML += "*" + "&nbsp;";
+      }
     }
   }
 });

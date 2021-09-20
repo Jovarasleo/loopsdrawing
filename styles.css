@@ -3,7 +3,7 @@ body {
   justify-content: center;
 }
 #app {
-  font-family: "monospace";
+  font-family: monospace;
   display: grid;
   width: 800px;
   justify-content: center;
