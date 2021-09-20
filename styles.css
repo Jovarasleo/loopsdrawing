@@ -9,3 +9,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

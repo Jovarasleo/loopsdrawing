@@ -11,16 +11,15 @@ const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
 const button4 = document.querySelector(".button4");
 const button5 = document.querySelector(".button5");
-
-button1.addEventListener("click", (event) => {
+function triangle() {
   for (i = 0; i <= aukstis; i++) {
     result.innerHTML += "<br>";
     for (it = 0; it < i; it++) {
       result.innerHTML += "*" + "&nbsp;";
     }
   }
-});
-button2.addEventListener("click", (event) => {
+}
+function pyramid() {
   for (i = 0; i <= aukstis; i++) {
     result.innerHTML += "<br>";
     for (it = aukstis; it >= i; it--) {
@@ -30,8 +29,8 @@ button2.addEventListener("click", (event) => {
       result.innerHTML += "*" + "&nbsp;";
     }
   }
-});
-button3.addEventListener("click", (event) => {
+}
+function reversePyramid() {
   result.innerHTML += "<br>";
   for (i = aukstis; i >= 0; i--) {
     result.innerHTML += "<br>";
@@ -42,8 +41,8 @@ button3.addEventListener("click", (event) => {
       result.innerHTML += "*" + "&nbsp;";
     }
   }
-});
-button4.addEventListener("click", (event) => {
+}
+function diamond() {
   for (i = 0; i <= aukstis / 2; i++) {
     result.innerHTML += "<br>";
     for (it = aukstis; it >= i; it--) {
@@ -74,7 +73,32 @@ button4.addEventListener("click", (event) => {
       }
     }
   }
-});
-button5.addEventListener("click", (event) => {
+}
+function clear() {
   result.innerHTML = "";
+}
+function choose(name) {
+  switch (name) {
+    case "triangle":
+      triangle();
+      break;
+    case "pyramid":
+      pyramid();
+      break;
+    case "rpyramid":
+      reversePyramid();
+      break;
+    case "diamond":
+      diamond();
+      break;
+    case "clear":
+      clear();
+      break;
+    default:
+  }
+}
+document.querySelector(".buttons").addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    choose(event.target.name);
+  }
 });
